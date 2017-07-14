@@ -5,7 +5,7 @@
 		<meta charset="utf-8">
 		<title>惠投官网</title>
 		<link rel="stylesheet" type="text/css" href="css/reset.css" />
-		<link rel="stylesheet" type="text/css" href="css/SearchInfoWindow_min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/SearchInfoWindow_min.css" />
 		<link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
 		<link href="https://cdn.bootcss.com/fullPage.js/2.9.4/jquery.fullpage.min.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
@@ -15,43 +15,38 @@
 		<script>
 			$(function() {
 				$.fn.extend({
-				    animateCss: function (animationName) {
-				        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-				        this.addClass('animated ' + animationName).one(animationEnd, function() {
-				            $(this).removeClass('animated ' + animationName);
-				        });
-				        return this;
-				    }
+					animateCss: function(animationName) {
+						var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+						this.addClass('animated ' + animationName).one(animationEnd, function() {
+							$(this).removeClass('animated ' + animationName);
+						});
+						return this;
+					}
 				});
 				$('#dowebok').fullpage({
 					sectionsColor: ['#fff', '#f5325c', '#fff', '#fff', '#f5325c'],
 					keyboardScrolling: false,
 					anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
 					menu: '#menu',
-					afterLoad: function(direction, index) {
-					},
+					afterLoad: function(direction, index) {},
 					onLeave: function(direction, index) {
-						if(index == 2 || index == 5) {
-							if(index == 2){
-								var $lis = $(".logo-list li");
-								$lis.hide();
-								var i = 0;
-			                    var index = setInterval(function() {  
-										$lis.eq(i).show().animateCss("rubberBand");
-										if( i >= $lis.length){
-											clearInterval(index)
-										}
-										i++;
-			                    	},90);  
-							}
-//							$("#logo img").attr("src", "images/logo_white.png");
-//							$("#menu").addClass("menu-red");
-//							$(".overseas").addClass("overseas-red");
-						} else {
-//							$("#logo img").attr("src", "images/logo_red.png");
-//							$("#menu").removeClass("menu-red");
-//							$(".overseas").removeClass("overseas-red");
+						if(index == 2) {
+							var $lis = $(".logo-list li");
+							$lis.hide();
+							var i = 0;
+							var index = setInterval(function() {
+								$lis.eq(i).show().animateCss("rubberBand");
+								if(i >= $lis.length) {
+									clearInterval(index)
+								}
+								i++;
+							}, 90);
 						}
+//						if(index == 1){
+//							$("header").removeClass("header-cur")
+//						}else{
+//							$("header").addClass("header-cur")
+//						}
 					}
 				});
 			});
@@ -60,8 +55,8 @@
 
 	<body>
 
-		<header>
-			<div class="content_width">
+		<header class="header-cur">
+			<div class="header-inner">
 				<div id="logo">
 					<img src="images/logo_red.png" alt="惠投广告" />
 				</div>
@@ -108,17 +103,17 @@
 				<div class="page-content cooperation">
 					<div class="l-pic">
 						<ul class="logo-list">
-							<li><img src="images/qiy.png"/></li>
-							<li><img src="images/xinlang.png"/></li>
-							<li><img src="images/yingyongbao.png"/></li>
-							<li><img src="images/uc.png"/></li>
-							<li><img src="images/toutiao.png"/></li>
-							<li><img src="images/oppo.png"/></li>
-							<li><img src="images/baidu.png"/></li>
-							<li><img src="images/momo.png"/></li>
-							<li><img src="images/weixin.png"/></li>
-							<li><img src="images/qq.png"/></li>
-							<li><img src="images/huitou.png"/></li>
+							<li><img src="images/qiy.png" /></li>
+							<li><img src="images/xinlang.png" /></li>
+							<li><img src="images/yingyongbao.png" /></li>
+							<li><img src="images/uc.png" /></li>
+							<li><img src="images/toutiao.png" /></li>
+							<li><img src="images/oppo.png" /></li>
+							<li><img src="images/baidu.png" /></li>
+							<li><img src="images/momo.png" /></li>
+							<li><img src="images/weixin.png" /></li>
+							<li><img src="images/qq.png" /></li>
+							<li><img src="images/huitou.png" /></li>
 						</ul>
 						<div class="logoinnerbg"></div>
 					</div>
@@ -158,38 +153,22 @@
 					<h3 class="title">他们都与惠投互动合作</h3>
 					<span class="success">成功案例</span>
 					<ul class="company">
-						<li><img src="images/pingan.png"></img>
-						</li>
-						<li><img src="images/tiantian.png"></img>
-						</li>
-						<li><img src="images/tengxun.png"></img>
-						</li>
-						<li><img src="images/youku.png"></img>
-						</li>
-						<li><img src="images/shengbei.png"></img>
-						</li>
-						<li><img src="images/wifi.png"></img>
-						</li>
-						<li><img src="images/wangyi.png"></img>
-						</li>
-						<li><img src="images/game37.png"></img>
-						</li>
-						<li><img src="images/zhaoshang.png"></img>
-						</li>
-						<li><img src="images/guangda.png"></img>
-						</li>
-						<li><img src="images/vip.png"></img>
-						</li>
-						<li><img src="images/ef.png"></img>
-						</li>
-						<li><img src="images/dajiang.png"></img>
-						</li>
-						<li><img src="images/jili.png"></img>
-						</li>
-						<li><img src="images/yy.png"></img>
-						</li>
-						<li><img src="images/anzhi.png"></img>
-						</li>
+						<li><img src="images/pingan.png"></img></li>
+						<li><img src="images/tiantian.png"></img></li>
+						<li><img src="images/tengxun.png"></img></li>
+						<li><img src="images/youku.png"></img></li>
+						<li><img src="images/shengbei.png"></img> </li>
+						<li><img src="images/wifi.png"></img> </li>
+						<li><img src="images/wangyi.png"></img> </li>
+						<li><img src="images/game37.png"></img> </li>
+						<li><img src="images/zhaoshang.png"></img></li>
+						<li><img src="images/guangda.png"></img></li>
+						<li><img src="images/vip.png"></img></li>
+						<li><img src="images/ef.png"></img></li>
+						<li><img src="images/dajiang.png"></img></li>
+						<li><img src="images/jili.png"></img></li>
+						<li><img src="images/yy.png"></img></li>
+						<li><img src="images/anzhi.png"></img></li>
 					</ul>
 				</div>
 			</div>
@@ -227,12 +206,8 @@
 						广州两把刷子信息科技有限公司<br /> Copyright(C)2015-2016 Ads marter All Right Reserved. 粤ICP 备16034375号
 					</p>
 				</div>
-				<div>
-					<!--<a href="#page1"><img src="images/arrow.png" alt="" class="arrow" /></a>-->
-				</div>
 			</div>
 		</div>
-
 	</body>
 
 </html>
@@ -250,16 +225,16 @@
 	map.addOverlay(marker); // 将标注添加到地图中
 	marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
 	var sContent = new BMapLib.SearchInfoWindow(map, "地址：广州市天河区科韵路12号之一方圆E时光西座29楼2910-2915", {
-			title: "慧投广告", //标题
-			width: 290, //宽度
-			height: 40, //高度
-			panel : "panel", //检索结果面板
-			enableAutoPan : true, //自动平移
-			searchTypes :[]
-		});
+		title: "慧投广告", //标题
+		width: 290, //宽度
+		height: 40, //高度
+		panel: "panel", //检索结果面板
+		enableAutoPan: true, //自动平移
+		searchTypes: []
+	});
 	marker.addEventListener("click", function(e) {
 		sContent.open(marker);
-	});	
+	});
 	//背景
 	Caroursel.init($('.caroursel'));
 	var num = 1000;
@@ -412,7 +387,7 @@
 			return _args;
 		}
 	};
-	
+
 	(function() {
 		"use strict";
 		var threeD = function(param) {
@@ -533,9 +508,6 @@
 				var g = this.$.createRadialGradient(this.varr[i].transOut.x, this.varr[i].transOut.y, this.varr[i].transOut.p, this.varr[i].transOut.x, this.varr[i].transOut.y, this.varr[i].transOut.p * 2);
 				this.$.globalCompositeOperation = 'lighter';
 				g.addColorStop(0, '#e43d59');
-				//			    g.addColorStop(0, 'hsla(255, 255%, 255%, 1)');
-				//			    g.addColorStop(.5, 'hsla(' + (i + 2) + ',85%, 40%,1)');
-				//			    g.addColorStop(1, 'hsla(' + (i) + ',85%, 40%,.5)');
 				this.$.fillStyle = g;
 				this.$.beginPath();
 				this.$.arc(this.varr[i].transOut.x, this.varr[i].transOut.y, this.varr[i].transOut.p * 2, 0, Math.PI * 2, false);
@@ -560,26 +532,6 @@
 
 		Build.prototype.run = function() {
 			this.anim();
-//			window.addEventListener('mousemove', function(e) {
-//				this.toX = (e.clientX - this.canvas.width / 2) * -0.8;
-//				this.toY = (e.clientY - this.canvas.height / 2) * 0.8;
-//			}.bind(this));
-//			window.addEventListener('touchmove', function(e) {
-//				e.preventDefault();
-//				this.toX = (e.touches[0].clientX - this.canvas.width / 2) * -0.8;
-//				this.toY = (e.touches[0].clientY - this.canvas.height / 2) * 0.8;
-//			}.bind(this));
-//			window.addEventListener('mousedown', function(e) {
-//				for(var i = 0; i < 100; i++) {
-//					this.add();
-//				}
-//			}.bind(this));
-//			window.addEventListener('touchstart', function(e) {
-//				e.preventDefault();
-//				for(var i = 0; i < 100; i++) {
-//					this.add();
-//				}
-//			}.bind(this));
 		};
 		var app = new Build();
 		app.run();

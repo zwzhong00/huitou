@@ -10,20 +10,25 @@ header{
 	overflow: hidden;
 	z-index: 10000;
 	width: 100%;
-    background: #fff;
-    -webkit-box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
-    -ms-box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
-    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
     margin-top: 0px;
-    top: 0;
+    top: -73px;
     padding-top: 10px;
     height: 73px;
     box-sizing: border-box;
+    transition: all 0.3s ease-in-out 0s;
 }
 
-.content_width {
-	width: 1200px;
+.header-cur{
+	top: 0;
+	background: #fff;
+	-webkit-box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
+}
+
+.header-inner {
+	width: 1170px;
 	margin: 0 auto;
 }
 
@@ -120,7 +125,7 @@ header{
 }
 
 .page-content{
-	width: 1100px;
+	width: 1170px;
 	height: 666px;
 	margin: 0 auto;
 }
@@ -131,11 +136,17 @@ header{
 	cursor: move;
 }
 
+.page2,.page5{
+	background-image: url(../images/bg_red.jpg);
+	background-size: 100%;
+}
+
 .page3 .Brand {
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	width: 1100px;
+	z-index: 5;
+	width: 1170px;
 	height: 666px;
 	box-shadow: 0 0 60px #ffeff1;
 	border-radius: 60px;
@@ -145,6 +156,11 @@ header{
 	color: #1e1e1e;
 	padding-left: 70px;
 	box-sizing: border-box;
+}
+
+.page4{
+	background-image: url(../images/bg_white.png);
+	background-size: 100%;
 }
 
 .cooperation{
@@ -322,12 +338,12 @@ header{
 }
 
 .poster-main .poster-prev-btn {
-	background: url("../images/left.png") no-repeat center center;
+	background: url("../images/left.jpg") no-repeat center center;
 	display: inline-block;
 }
 
 .poster-main .poster-next-btn {
-	background: url("../images/right.png") no-repeat center center;
+	background: url("../images/rigth.jpg") no-repeat center center;
 	display: inline-block;
 }
 
@@ -364,6 +380,7 @@ header{
 	width: 640px;
 	height: 360px;
 	display: inline-block;
+	border-radius: 5px;
 }
 
 .Filing {
@@ -375,7 +392,6 @@ header{
 	cursor: pointer;
 	margin-top: 120px;
 }
-
 
 /*css3动画*/
 
